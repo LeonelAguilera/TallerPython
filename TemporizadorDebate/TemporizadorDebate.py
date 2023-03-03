@@ -38,11 +38,6 @@ class contadorTurnos:
     def update(self):
         self.currentTime = dt.now()
         #Comprobar si debe ocurrir cambio de turno
-        print(self.currentTime >= self.endTime)
-        print(self.cancel)
-        print((self.currentTime >= self.endTime) or self.cancel)
-        print(self.currentIndex)
-        print(len(self.listaNombres))
         if (self.currentTime >= self.endTime or self.cancel) and self.currentIndex < len(self.listaNombres):
             self.turno = self.listaNombres[self.currentIndex]
             self.currentIndex += 1

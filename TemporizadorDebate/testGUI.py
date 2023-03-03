@@ -14,7 +14,11 @@ class Aplicacion():
     def __init__(self):
         self.back = contadorTurnos(30)
         self.raiz = Tk()
-        self.raiz.geometry('300x200')
+        
+        self.altura_raiz = self.raiz.winfo_height()
+        self.ancho_raiz = self.raiz.winfo_width()
+        
+        self.raiz.geometry('900x500')
         self.raiz.configure(bg = 'gray')
         self.raiz.title('Reunión Junta')
         
@@ -53,7 +57,6 @@ class Aplicacion():
 
 def main():
     mi_app = Aplicacion()
-    print("Patata")
     return 0
 
 # Mediante el atributo __name__ tenemos acceso al nombre de un
